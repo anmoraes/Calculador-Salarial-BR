@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FD133149"
+    tools:context="br.anmoraes.calculador_salarial_br.Termos">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="#09628A"
+        android:fontFamily="sans-serif"
+        android:gravity="fill|center"
+        android:text="Termos de Uso"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="54dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="350dp"
+        android:onClick="voltar"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="370dp"
+        android:layout_height="285dp"
+        android:layout_marginTop="28dp"
+        android:text="Este aplicativo é de caráter unicamente informativo, portanto, os valores aqui obtidos não possuem efeito legal.\n\nTodos os cálculos que compõem os descontos de IRPF e INSS, assim como o recolhimento do FGTS pago pelo empregador, utilizam as tabelas oficiais vigentes na data de publicação da última versão desse aplicativo.\n\nAo usar este aplicativo o usuário está ciente e concorda com os termos aqui apresentados."
+        android:textAlignment="textStart"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
