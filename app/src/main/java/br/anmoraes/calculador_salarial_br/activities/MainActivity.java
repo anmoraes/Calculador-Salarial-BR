@@ -1,4 +1,4 @@
-package br.anmoraes.calculador_salarial_br;
+package br.anmoraes.calculador_salarial_br.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,10 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import br.anmoraes.calculador_salarial_br.appObjetos.INSS;
+import br.anmoraes.calculador_salarial_br.appObjetos.IRPF;
+import br.anmoraes.calculador_salarial_br.R;
+
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText editSalarioBruto,
+    private EditText editSalarioBruto,
              editDependentes,
              editPensaoAlimenticia,
              editOutrosDescontos;
@@ -24,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         editDependentes         = findViewById(R.id.editDependentes);
         editPensaoAlimenticia   = findViewById(R.id.editPensaoAlimenticia);
         editOutrosDescontos     = findViewById(R.id.editOutrosDescontos);
+
     }
 
     //Salario Bruto inserido pelo usuário
@@ -121,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
     // Disparador do cálculo
     public void btCalcular(View view) {
 
+
         //Intent Enviadora
         Intent intentEnviadora = new Intent(MainActivity.this, Resultado.class);
 
@@ -137,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(intentEnviadora);
         finish();
+
     }
 
     //Abre a tela de Política de Privacidade
@@ -155,4 +162,13 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
+    //Abre a tela dos Termos de Uso
+    public void btListarSimulacoes(View view){
+
+        Intent intentTermos = new Intent(this, ListarSimulacao.class);
+        startActivity(intentTermos);
+        finish();
+    }
+
 }
+

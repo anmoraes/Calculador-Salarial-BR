@@ -1,4 +1,4 @@
-package br.anmoraes.calculador_salarial_br;
+package br.anmoraes.calculador_salarial_br.appObjetos;
 
 public class INSS {
 

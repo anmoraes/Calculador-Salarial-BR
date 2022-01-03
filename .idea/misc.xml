@@ -5,13 +5,22 @@
       <map>
         <entry key="..\:/Users/admin/AndroidStudioProjects/CalculadorSalarialBR/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.14722222222222223" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/CalculadorSalarialBR/app/src/main/res/drawable/ic_launcher_background.xml" value="0.14722222222222223" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/CalculadorSalarialBR/app/src/main/res/layout/activity_edit_simulacao.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/CalculadorSalarialBR/app/src/main/res/layout/activity_editar_simulacao.xml" value="0.1" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/CalculadorSalarialBR/app/src/main/res/layout/activity_listar_simulacao.xml" value="0.25" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/CalculadorSalarialBR/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/CalculadorSalarialBR/app/src/main/res/layout/activity_politica.xml" value="0.25" />
-        <entry key="..\:/Users/admin/AndroidStudioProjects/CalculadorSalarialBR/app/src/main/res/layout/activity_resultado.xml" value="0.1" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/CalculadorSalarialBR/app/src/main/res/layout/activity_resultado.xml" value="0.22" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/CalculadorSalarialBR/app/src/main/res/layout/activity_salvar_simulacao.xml" value="0.33" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/CalculadorSalarialBR/app/src/main/res/layout/activity_termos.xml" value="0.33" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/CalculadorSalarialBR/app/src/main/res/layout/content_scrolling.xml" value="0.1574074074074074" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/CalculadorSalarialBR/app/src/main/res/layout/linha_lista.xml" value="0.25" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/CalculadorSalarialBR/app/src/main/res/menu/menu_scrolling.xml" value="0.25" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/CalculadorSalarialBR/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2890625" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/CalculadorSalarialBR/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2824074074074074" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/CalculadorSalarialBR/app/src/main/res/mipmap-xxhdpi/ic_Calc.xml" value="0.15" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Nova pasta (2)/CalculadorSalarialBR/app/src/main/res/layout/activity_main.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Nova pasta (2)/CalculadorSalarialBR/app/src/main/res/layout/activity_salvar_simulacao.xml" value="0.27291666666666664" />
       </map>
     </option>
   </component>

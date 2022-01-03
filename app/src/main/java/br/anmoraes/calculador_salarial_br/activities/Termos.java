@@ -1,10 +1,13 @@
-package br.anmoraes.calculador_salarial_br;
+package br.anmoraes.calculador_salarial_br.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import br.anmoraes.calculador_salarial_br.R;
+import br.anmoraes.calculador_salarial_br.activities.MainActivity;
 
 public class Termos extends AppCompatActivity {
 

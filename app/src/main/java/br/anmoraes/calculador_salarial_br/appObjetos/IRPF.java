@@ -1,4 +1,6 @@
-package br.anmoraes.calculador_salarial_br;
+package br.anmoraes.calculador_salarial_br.appObjetos;
+
+import br.anmoraes.calculador_salarial_br.activities.MainActivity;
 
 public class IRPF extends MainActivity {
 

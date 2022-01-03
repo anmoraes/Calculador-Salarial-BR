@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FD133149"
-    tools:context="br.anmoraes.calculador_salarial_br.Politica">
+    tools:context="br.anmoraes.calculador_salarial_br.activities.Politica">
 
     <TextView
         android:id="@+id/textView"

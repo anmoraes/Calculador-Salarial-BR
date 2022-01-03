@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FD133149"
     android:orientation="vertical"
-    tools:context="br.anmoraes.calculador_salarial_br.MainActivity">
+    tools:context="br.anmoraes.calculador_salarial_br.activities.MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -145,13 +145,29 @@
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
         <Button
-            android:id="@+id/botaoCalcular"
+            android:id="@+id/btCalcular"
             android:layout_width="120dp"
-            android:layout_height="50dp"
+            android:layout_height="55dp"
             android:layout_marginTop="30dp"
+            android:layout_marginEnd="235dp"
             android:backgroundTint="#450303"
             android:onClick="btCalcular"
             android:text="Calcular"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editOutrosDescontos" />
+
+        <Button
+            android:id="@+id/btAbrirSimulacoes"
+            android:layout_width="120dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="235dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#450303"
+            android:onClick="btListarSimulacoes"
+            android:text="Simulações Salvas"
             android:textColor="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -161,6 +177,7 @@
             android:id="@+id/politica"
             android:layout_width="102dp"
             android:layout_height="43dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="230dp"
             android:backgroundTint="#FD133149"
             android:onClick="btPolitica"
@@ -170,7 +187,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.329"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/botaoCalcular"
+            app:layout_constraintTop_toBottomOf="@+id/btCalcular"
             tools:ignore="TouchTargetSizeCheck" />
 
         <Button
@@ -178,6 +195,7 @@
             android:layout_width="105dp"
             android:layout_height="43dp"
             android:layout_marginStart="230dp"
+            android:layout_marginTop="30dp"
             android:backgroundTint="#FD133149"
             android:onClick="btTermos"
             android:text="Termos de Uso"
@@ -186,7 +204,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.671"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/botaoCalcular"
+            app:layout_constraintTop_toBottomOf="@+id/btCalcular"
             tools:ignore="TouchTargetSizeCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

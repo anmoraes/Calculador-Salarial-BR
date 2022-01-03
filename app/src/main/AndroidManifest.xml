@@ -10,16 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name="br.anmoraes.calculador_salarial_br.Termos"
+            android:name=".activities.EditarSimulacao"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ListarSimulacao"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SalvarSimulacao"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Termos"
             android:exported="true" />
         <activity
-            android:name="br.anmoraes.calculador_salarial_br.Politica"
+            android:name=".activities.Politica"
             android:exported="true" />
         <activity
-            android:name="br.anmoraes.calculador_salarial_br.Resultado"
+            android:name=".activities.Resultado"
             android:exported="true" />
         <activity
-            android:name="br.anmoraes.calculador_salarial_br.MainActivity"
+            android:name=".activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
