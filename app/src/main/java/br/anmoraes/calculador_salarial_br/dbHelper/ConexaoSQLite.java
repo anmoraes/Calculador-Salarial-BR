@@ -1,17 +1,13 @@
 package br.anmoraes.calculador_salarial_br.dbHelper;
 
-
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import java.util.ArrayList;
-
 
 import br.anmoraes.calculador_salarial_br.model.Simulacao;
 
@@ -35,7 +31,7 @@ public class ConexaoSQLite extends SQLiteOpenHelper {
     private static final String SALARIO_LIQUIDO = "salarioLiquido";
 
     private static final String[] COLUNAS =
-            {NOME_CADASTRO, SALARIO_BRUTO, VALOR_INSS,
+            {ID,NOME_CADASTRO, SALARIO_BRUTO, VALOR_INSS,
                     VALOR_IRPF, PENSAO_ALIMENTICIA, OUTROS_DESCONTOS,
                     BASE_IRPF, FGTS_DEPOSITADO, SALARIO_LIQUIDO};
 
@@ -52,35 +48,27 @@ public class ConexaoSQLite extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         Log.d("ConexaoSQLite", "onCreate");
 
-        String sqlSimulacao = "CREATE TABLE IF NOT EXISTS resultado \n" +
-                "(id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "nomeCadastro TEXT,\n" +
-                "salarioBruto REAL,\n" +
-                "valorINSS REAL,\n" +
-                "valorIRPF REAL,\n" +
-                "pensaoAlimenticia REAL,\n" +
-                "outrosDescontos REAL,\n" +
-                "baseIRPF REAL,\n" +
-                "fgtsDepositado REAL,\n" +
-                "salarioLiquido REAL\n" +
-                ");";
-
-        try {
+        String sqlSimulacao = "CREATE TABLE IF NOT EXISTS resultado ("+
+                "id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "nomeCadastro TEXT," +
+                "salarioBruto REAL," +
+                "valorINSS REAL," +
+                "valorIRPF REAL," +
+                "pensaoAlimenticia REAL," +
+                "outrosDescontos REAL," +
+                "baseIRPF REAL," +
+                "fgtsDepositado REAL," +
+                "salarioLiquido REAL)";
 
             db.execSQL(sqlSimulacao);
-            this.onUpgrade(db, 1, DB_VERSION);
-
-        } catch (SQLException e) {
-
-            Log.e("DB_LOG", "onCreate:" + e.getLocalizedMessage());
-
-        }
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         Log.d("ConexaoSQLite", "onUpgrade");
+        db.execSQL("DROP TABLE IF EXISTS livros");
+        this.onCreate(db);
 
     }
 
@@ -107,7 +95,7 @@ public class ConexaoSQLite extends SQLiteOpenHelper {
 
 
     public Simulacao getSimulacao(int id) {
-        db = this.getReadableDatabase();
+        SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor cursor = db.query(TABELA_RESULTADO, // a. tabela
                 COLUNAS, // b. colunas

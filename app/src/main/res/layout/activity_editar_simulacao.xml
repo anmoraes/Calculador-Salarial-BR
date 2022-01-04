@@ -29,6 +29,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="54dp"
+            android:layout_height="41dp"
+            android:layout_marginEnd="350dp"
+            android:onClick="voltarToLista"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView"
+            app:srcCompat="?attr/actionModeCloseDrawable" />
+
         <EditText
             android:id="@+id/nomeEdit"
             android:layout_width="360dp"
@@ -36,11 +48,8 @@
             android:layout_marginTop="60dp"
             android:layout_marginBottom="60dp"
             android:ems="10"
-            android:hint="Insira o nome da simulação"
-            android:inputType="text"
             android:textAlignment="center"
             android:textColor="#F6F6F6"
-            android:textColorHint="#46FAFAFA"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -57,7 +66,6 @@
             android:layout_marginEnd="220dp"
             android:layout_marginBottom="20dp"
             android:backgroundTint="#450303"
-            android:onClick="btAlterar"
             android:text="Alterar"
             android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -73,7 +81,6 @@
             android:layout_marginTop="30dp"
             android:layout_marginBottom="20dp"
             android:backgroundTint="#450303"
-            android:onClick="btRemover"
             android:text="Remover"
             android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -21,8 +21,6 @@ public class Resultado extends AppCompatActivity {
              txtFGTS,
              txtSalarioLiquido;
 
-    private Simulacao objTabResult;
-
     private double salarioBruto, descontoINSS, descontoIRPF,
                    descontoPensao, outrosDescontos, baseIRPF,
                    fgtsValor, salarioLiquido;
@@ -90,7 +88,6 @@ public class Resultado extends AppCompatActivity {
             txtSalarioLiquido.setText("R$ " + salarioLiquidofinal);
 
         }
-
     }
 
    //Voltar para tela inicial
@@ -99,7 +96,6 @@ public class Resultado extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
-
     }
 
     public void btSalvarSimulacao (View view) {

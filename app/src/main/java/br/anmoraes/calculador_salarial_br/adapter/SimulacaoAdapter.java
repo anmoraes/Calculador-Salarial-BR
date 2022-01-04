@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import br.anmoraes.calculador_salarial_br.R;
@@ -16,6 +17,10 @@ public class SimulacaoAdapter extends ArrayAdapter<Simulacao> {
 
     private final Context context;
     private final ArrayList<Simulacao> elementos;
+
+    private double salarioBruto, descontoINSS, descontoIRPF,
+            descontoPensao, outrosDescontos, baseIRPF,
+            fgtsValor, salarioLiquido;
 
     public SimulacaoAdapter(Context context, ArrayList<Simulacao> elementos) {
 
@@ -29,27 +34,51 @@ public class SimulacaoAdapter extends ArrayAdapter<Simulacao> {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView = inflater.inflate(R.layout.linha_lista, parent, false);
-        TextView nome = (TextView) rowView.findViewById(R.id.edtNome);
-        TextView salarioB = (TextView) rowView.findViewById(R.id.edtSalarioB);
-        TextView txtValorINSS = (TextView) rowView.findViewById(R.id.txtValorINSS);
-        TextView txtValorIRPF = (TextView) rowView.findViewById(R.id.txtValorIRPF);
-        TextView txtPensao = (TextView) rowView.findViewById(R.id.txtPensao);
-        TextView txtOutros = (TextView) rowView.findViewById(R.id.txtOutros);
-        TextView txtBase = (TextView) rowView.findViewById(R.id.txtBase);
-        TextView txtFDepositado = (TextView) rowView.findViewById(R.id.txtFDepositado);
-        TextView salarioL = (TextView) rowView.findViewById(R.id.edtSalarioL);
-
+        TextView nome = rowView.findViewById(R.id.edtNome);
+        TextView salarioB = rowView.findViewById(R.id.edtSalarioB);
+        TextView txtValorINSS = rowView.findViewById(R.id.txtValorINSS);
+        TextView txtValorIRPF = rowView.findViewById(R.id.txtValorIRPF);
+        TextView txtPensao = rowView.findViewById(R.id.txtPensao);
+        TextView txtOutros = rowView.findViewById(R.id.txtOutros);
+        TextView txtBase = rowView.findViewById(R.id.txtBase);
+        TextView txtFDepositado = rowView.findViewById(R.id.txtFDepositado);
+        TextView salarioL = rowView.findViewById(R.id.edtSalarioL);
 
         nome.setText(elementos.get(position).getNomeCadastro());
-        salarioB.setText("Salário Bruto = " +Double.toString(elementos.get(position).getSalariobruto()));
-        txtValorINSS.setText("Valor INSS = " +Double.toString(elementos.get(position).getValorINSS()));
-        txtValorIRPF.setText("Valor IFPF = " +Double.toString(elementos.get(position).getValorIRPF()));
-        txtPensao.setText("Desconto de Pensão = " +Double.toString(elementos.get(position).getPensaoAlimenticia()));
-        txtOutros.setText("Outros Descontos = " +Double.toString(elementos.get(position).getOutrosDescontos()));
-        txtBase.setText("Salario Base IRPF = " +Double.toString(elementos.get(position).getBaseIRPF()));
-        txtFDepositado.setText("FGTS Depositado = " +Double.toString(elementos.get(position).getFgtsDespositado()));
-        salarioL.setText("Salário Líquido = " +Double.toString(elementos.get(position).getSalarioLiquido()));
 
+        DecimalFormat decimal = new DecimalFormat("0.00");
+
+        salarioBruto = elementos.get(position).getSalariobruto();
+        String sBruto = decimal.format(salarioBruto);
+        salarioB.setText("Salário Bruto = R$ " +sBruto);
+
+        descontoINSS = elementos.get(position).getValorINSS();
+        String dINSS = decimal.format(descontoINSS);
+        txtValorINSS.setText("Valor INSS = R$ " +dINSS);
+
+        descontoIRPF = elementos.get(position).getValorIRPF();
+        String dIRPF = decimal.format(descontoIRPF);
+        txtValorIRPF.setText("Valor IFPF = R$ " +dIRPF);
+
+        descontoPensao = elementos.get(position).getPensaoAlimenticia();
+        String dPensao = decimal.format(descontoPensao);
+        txtPensao.setText("Desconto de Pensão = R$ " +dPensao);
+
+        outrosDescontos = elementos.get(position).getOutrosDescontos();
+        String oDescontos = decimal.format(outrosDescontos);
+        txtOutros.setText("Outros Descontos = R$ " +oDescontos);
+
+        baseIRPF = elementos.get(position).getBaseIRPF();
+        String bIRPF = decimal.format(baseIRPF);
+        txtBase.setText("Salario Base IRPF = R$ " +bIRPF);
+
+        fgtsValor = elementos.get(position).getFgtsDespositado();
+        String fValor = decimal.format(fgtsValor);
+        txtFDepositado.setText("FGTS Depositado = R$ " +fValor);
+
+        salarioLiquido = elementos.get(position).getSalarioLiquido();
+        String sLiquido = decimal.format(salarioLiquido);
+        salarioL.setText("Salário Líquido = R$ " +sLiquido);
 
         return rowView;
     }

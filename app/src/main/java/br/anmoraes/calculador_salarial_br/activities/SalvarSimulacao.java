@@ -6,18 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Toast;
-
-import java.util.ArrayList;
-
 import br.anmoraes.calculador_salarial_br.R;
-import br.anmoraes.calculador_salarial_br.adapter.SimulacaoAdapter;
 import br.anmoraes.calculador_salarial_br.model.Simulacao;
 import br.anmoraes.calculador_salarial_br.dbHelper.ConexaoSQLite;
 
 public class SalvarSimulacao extends AppCompatActivity {
-
 
     private ConexaoSQLite bd;
     private Simulacao objTabResult;
@@ -43,7 +37,6 @@ public class SalvarSimulacao extends AppCompatActivity {
     }
 
     public void btEnviarDB (View view) {
-
 
         Intent intentRecebeDB = getIntent();
         Bundle parametros = intentRecebeDB.getExtras();
@@ -77,7 +70,6 @@ public class SalvarSimulacao extends AppCompatActivity {
             //Nome de Identificação Cadastrada
             String nomeCadastrado = nomeCadastro.getText().toString();
 
-
             objTabResult = new Simulacao();
 
             objTabResult.setNomeCadastro(nomeCadastrado);
@@ -95,7 +87,6 @@ public class SalvarSimulacao extends AppCompatActivity {
 
             Toast.makeText(getApplicationContext(), nomeCadastrado+" Salvo", Toast.LENGTH_LONG).show();
 
-
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
             finish();
@@ -103,10 +94,3 @@ public class SalvarSimulacao extends AppCompatActivity {
     }
 
 }
-
-
-//UPDATE table SET colunaA = novo_conteuddoA WHERE condição
-//conexaoSQLite.update("resultado", objTabResult);
-
-//DELETE FROM table WHERE condição
-//conexaoSQLite.delete("resultado", objTabResult.getId());
